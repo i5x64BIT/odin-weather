@@ -1,0 +1,65 @@
+html,body,h1,h2,h3,h4,input,p,div,span,a,table,td,tr{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary-dark: #11009E;
+    --primary: #4942E4;
+    --secondary: #8696FE;
+    --secondary-light: #C4B0FF;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Layout */
+.page-container{
+    min-height: 100svh;
+    background-color: var(--primary);
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 1em 1.5em;
+    background-color: var(--primary-dark);
+    position: relative;
+}
+.title{
+    position: absolute;
+    left: 1em;
+    top: 0;
+    display: flex;
+}
+
+[type="search"]{
+    margin: auto;
+    border-radius: 20px;
+    border: 0;
+    padding: .5em 1em;
+    width: clamp(5rem, 30vw, 430px);
+}
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin-top: 4em;
+    font-size: 1.5rem;
+}
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.forecast-container{
+    margin-top: 2em;
+}
+.forecast{
+    margin-top: .5em;
+    min-width: 500px;
+}
+.forecast-container legend{
+    text-align: center;
+}
