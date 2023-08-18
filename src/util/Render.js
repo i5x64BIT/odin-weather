@@ -2,7 +2,9 @@ import { fetchData } from "./weather_api";
 import dateFormat, { masks } from "dateformat";
 
 let data = await fetchData('Tel Aviv');
-const renderData = () => {
+const renderData = async (input) => {
+    input = input.toString();
+    if(input) data = await fetchData(input);
     const locationElem = document.querySelector('.location');
     locationElem.innerText = `${data.location.name}, ${data.location.country}`;
 
