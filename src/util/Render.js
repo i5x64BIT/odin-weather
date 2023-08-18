@@ -3,8 +3,7 @@ import dateFormat, { masks } from "dateformat";
 
 let data = await fetchData('Tel Aviv');
 const renderData = async (input) => {
-    input = input.toString();
-    if(input) data = await fetchData(input);
+    if(input) data = await fetchData(input.toString());
     const locationElem = document.querySelector('.location');
     locationElem.innerText = `${data.location.name}, ${data.location.country}`;
 
